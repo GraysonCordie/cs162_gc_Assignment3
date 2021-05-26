@@ -1,0 +1,27 @@
+#page-wrapper {
+    width: 75%;
+    background-color: white;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.bold {
+    font-weight: bold;
+    color: black;
+}
+
+.underline {
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.clear {
+    clear: left;
+    display: block;
+}
