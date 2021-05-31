@@ -15,6 +15,8 @@ class Home extends BaseController
 		$data['alert'] = true;
 		$data['employees'] = $employees;
 
-		return view('my_welcome_message', $data);
+		echo view('Templates/header');
+		echo view('my_welcome_message', $data);
+		echo view('Templates/footer');
 	}
 }
