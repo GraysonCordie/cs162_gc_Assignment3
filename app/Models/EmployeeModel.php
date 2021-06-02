@@ -6,9 +6,11 @@ use CodeIgniter\Model;
 
 class EmployeeModel extends Model
 {
+    //attributes
     protected $table = 'employee';
     protected $db;
 
+    //constuctor 
     public function __construct(){
         parent::__construct();
         $this->db = \Config\Database::connect();
@@ -18,7 +20,11 @@ class EmployeeModel extends Model
 
     }
 
-    public function delete_employee($id = 0){
+    public function delete_employee($id = false){
+
+    }
+
+    public function update_employee($employee = array()){
 
     }
 
@@ -31,9 +37,25 @@ class EmployeeModel extends Model
         }
         else{
             //otherwise get employee by id
-            $query = $this->db->query("SELECT * FROM " . $this->table . " WHERE id='".$id."'");
+            $sql = "SELECT * FROM " . $this->table . " WHERE id='".$id."'";
+            $query = $this->db->query($sql);
             //SELECT * FROM employee WHERE id='1'
             return $query->getResult();
         }
+    }
+
+    public function get_columnNames(){
+        //information we know
+        /*
+        -names of the columns
+        -number of columns
+        -we know to write SQL select
+
+        */
+        //information we don't know
+        /*
+        -get the names of all table columns
+        */
+        return $this->db->getFieldNames($this->table);
     }
 }

@@ -15,11 +15,13 @@
 </style>
 
 <div class="myDiv<?php if($alert) { echo " alert"; } ?>">
-    <?php echo $page_title; ?>
+    <?php echo $pageTitle; ?>
 </div>
 
-<?php foreach($employees as $employee) : ?>
-<div class="employee">
-    <?php echo $employee->id ."-". $employee->firstName . " " . $employee->lastName; ?>
+<div class="w3-container w3-center">
+    <h3>Column Fields Names</h3>
+    <?php foreach($employeeFields as $field) : ?>
+    <div class="w3-quarter w3-card"><?php echo $field; ?></div>
+    <?php endforeach; ?>
 </div>
-<?php endforeach; ?>
+
