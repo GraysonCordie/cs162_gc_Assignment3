@@ -1,9 +1,9 @@
 <?php if(isset($_POST['submit'])) : ?>
     <?php //execute this code if form is submitted ?>
 <?php else : ?>
-<form name="new_employee_form" method="POST">
-<div class="w3-container" >
-    <div class="" style="margin: 0 auto; width: 50%; border: 2px solid #000;">
+<form name="new_employee" method="POST">
+<div class="w3-container">
+    <div class="w3-half" style="margin: 0 auto; width: 50%; border: 2px solid #000;">
         <div class="w3-section"><h3>Enter Employee Information</h3></div>
         <?php foreach($formFields as $field) :?>
             <?php if($field != 'id') : ?>
@@ -14,7 +14,7 @@
             <?php endif; ?>
         <?php endforeach; ?>
         <div class="w3-section">
-            <input class="w3-button w3-theme" type="submit" name="submit" value="Submit" />
+            <input class="w3-btn w3-theme" type="submit" name="submit" value="Submit" />
         </div>
     </div>
 </div>

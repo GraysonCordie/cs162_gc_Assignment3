@@ -15,7 +15,7 @@
 </style>
 
 <div class="myDiv<?php if($alert) { echo " alert"; } ?>">
-    <?php echo $pageTitle; ?>
+    <?php echo $page_title; ?>
 </div>
 
 <div class="w3-container w3-center">

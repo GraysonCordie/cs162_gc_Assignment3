@@ -37,8 +37,8 @@ $routes->get('/', 'Home::index');
 $routes->add('employee', 'Employee::view');
 $routes->add('employee/(:num)', 'Employee::view/$1');
 $routes->add('employee/create', 'Employee::create');
-$routes->add('employee/delete', 'Employee::delete');
 $routes->add('employee/update', 'Employee::update');
+$routes->add('employee/delete', 'Employee::delete');
 
 /*
  * --------------------------------------------------------------------

@@ -7,8 +7,8 @@ class Employee extends BaseController
 {
     private $employeeModel;
     private $employeeFields;
-    //$data['employeeFields'] = $employeeFields; <- used for passing into view
-
+    //$data['employeeFields'] = $employeeFields; <- used for passing into a view
+    
     public function __construct(){
         $this->employeeModel = new EmployeeModel();
         $this->employeeFields = $this->employeeModel->get_columnNames();
@@ -19,33 +19,33 @@ class Employee extends BaseController
         $employees = $this->employeeModel->get_employee($seg1);
         $data['employees'] = $employees;
 
-        echo view('Templates/header.php', $data);
+        echo view('templates/header.php', $data);
         echo view('employee/view.php', $data);
-        echo view('Templates/footer.php');
+        echo view('templates/footer.php');
     }
 
     public function create(){
         $data['pageTitle'] = "Create Employee";
         $data['formFields'] = $this->employeeFields;
 
-        echo view('Templates/header.php', $data);
+        echo view('templates/header.php', $data);
         echo view('employee/create.php');
-        echo view('Templates/footer.php');
+        echo view('templates/footer.php');
     }
 
     public function update(){
-        $data['pageTitle'] = "Update Employees";
+        $data['pageTitle'] = "Update Employee";
 
-        echo view('Templates/header.php', $data);
-        echo view('employee/update.php', $data);
-        echo view('Templates/footer.php');
+        echo view('templates/header.php', $data);
+        echo view('employee/update.php');
+        echo view('templates/footer.php');
     }
 
     public function delete(){
-        $data['pageTitle'] = "Delete Employees";
+        $data['pageTitle'] = "Delete Employee";
 
-        echo view('Templates/header.php', $data);
-        echo view('employee/delete.php', $data);
-        echo view('Templates/footer.php');
+        echo view('templates/header.php', $data);
+        echo view('employee/delete.php');
+        echo view('templates/footer.php');
     }
 }

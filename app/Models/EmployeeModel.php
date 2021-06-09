@@ -10,7 +10,7 @@ class EmployeeModel extends Model
     protected $table = 'employee';
     protected $db;
 
-    //constuctor 
+    //constructor
     public function __construct(){
         parent::__construct();
         $this->db = \Config\Database::connect();
@@ -49,7 +49,7 @@ class EmployeeModel extends Model
         /*
         -names of the columns
         -number of columns
-        -we know to write SQL select
+        -we know how to write SQL select
 
         */
         //information we don't know
