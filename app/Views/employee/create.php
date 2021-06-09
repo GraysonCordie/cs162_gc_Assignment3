@@ -1,6 +1,4 @@
-<?php if(isset($_POST['submit'])) : ?>
-    <?php //execute this code if form is submitted ?>
-<?php else : ?>
+<?= \Config\Services::validation()->listErrors() ?>
 <form name="new_employee" method="POST">
 <div class="w3-container">
     <div class="w3-half" style="margin: 0 auto; width: 50%; border: 2px solid #000;">
@@ -19,4 +17,3 @@
     </div>
 </div>
 </form>
-<?php endif; ?>

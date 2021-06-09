@@ -9,6 +9,7 @@ class EmployeeModel extends Model
     //attributes
     protected $table = 'employee';
     protected $db;
+    protected $allowedFields = ['firstName', 'lastName', 'dob', 'departmentName'];
 
     //constructor
     public function __construct(){
